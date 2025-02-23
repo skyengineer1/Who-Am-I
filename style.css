@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+#about-me {
+    padding: 2em 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    color: white;
+}
+
+.profile-photo {
+    width: 22em;
+    height: 22em;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid tomato;
+}
+
+.about-title {
+    font-size: 1.5rem;
+}
+
+.about-header {
+    font-size: 4rem;
+    color: tomato;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    text-align-last: center;
+}
+
+#services {
+    padding: 2em 5em;
+}
+
+.services-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    width: 90%;
+    margin: auto;
+}
+
+.services-grid-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 3em 2em;
+    background-color: white;
+    border-bottom: 10px solid tomato;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.fa-solid {
+    font-size: 3rem;
+}
+
+.services-title {
+    font-weight: normal;
+}
+
+.learn-more {
+    text-decoration: 1px underline tomato;
+    text-underline-offset: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .services-grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .services-grid-container {
+      grid-template-columns: 1fr;
+    }
+    
+    #about-me {
+        padding: 1em 3em;
+    }
+
+    #services {
+        padding: 1em 3em;
+    }
+    
+    .about-description {
+        text-align-last: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-photo {
+      width: 15em;
+      height: 15em;
+    }
+
+    .about-header {
+        font-size: 2rem;
+    }
+}
